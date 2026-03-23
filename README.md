@@ -19,6 +19,6 @@ Excluded on purpose:
 
 Current families included:
 
-- OpenAI GPT versioned models
+- OpenAI GPT-5 versioned models
 - Anthropic Claude current aliases
 - Gemini current text multimodal models
