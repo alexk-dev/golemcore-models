@@ -1,0 +1,23 @@
+{
+  "displayName": "GPT-5-Codex",
+  "supportsVision": true,
+  "supportsTemperature": false,
+  "maxInputTokens": 400000,
+  "reasoning": {
+    "default": "medium",
+    "levels": {
+      "minimal": {
+        "maxInputTokens": 400000
+      },
+      "low": {
+        "maxInputTokens": 400000
+      },
+      "medium": {
+        "maxInputTokens": 400000
+      },
+      "high": {
+        "maxInputTokens": 400000
+      }
+    }
+  }
+}
