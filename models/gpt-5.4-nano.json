@@ -1,0 +1,6 @@
+{
+  "displayName": "GPT-5.4 nano",
+  "supportsVision": true,
+  "supportsTemperature": false,
+  "maxInputTokens": 400000
+}

@@ -1,0 +1,20 @@
+{
+  "displayName": "Gemini 3.1 Pro Preview",
+  "supportsVision": true,
+  "supportsTemperature": true,
+  "maxInputTokens": 1048576,
+  "reasoning": {
+    "default": "high",
+    "levels": {
+      "low": {
+        "maxInputTokens": 1048576
+      },
+      "medium": {
+        "maxInputTokens": 1048576
+      },
+      "high": {
+        "maxInputTokens": 1048576
+      }
+    }
+  }
+}

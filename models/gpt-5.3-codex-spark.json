@@ -1,0 +1,6 @@
+{
+  "displayName": "GPT-5.3-Codex-Spark",
+  "supportsVision": false,
+  "supportsTemperature": false,
+  "maxInputTokens": 128000
+}

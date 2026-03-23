@@ -1,0 +1,6 @@
+{
+  "displayName": "Claude Haiku 4.5",
+  "supportsVision": true,
+  "supportsTemperature": true,
+  "maxInputTokens": 200000
+}

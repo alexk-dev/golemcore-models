@@ -1,0 +1,6 @@
+{
+  "displayName": "Claude Sonnet 4.6",
+  "supportsVision": true,
+  "supportsTemperature": true,
+  "maxInputTokens": 1000000
+}
