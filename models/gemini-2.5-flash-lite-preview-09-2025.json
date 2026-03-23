@@ -1,0 +1,6 @@
+{
+  "displayName": "Gemini 2.5 Flash-Lite Preview",
+  "supportsVision": true,
+  "supportsTemperature": true,
+  "maxInputTokens": 1048576
+}

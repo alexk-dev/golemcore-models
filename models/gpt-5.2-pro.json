@@ -1,21 +1,18 @@
 {
-  "displayName": "GPT-5.1",
+  "displayName": "GPT-5.2 pro",
   "supportsVision": true,
   "supportsTemperature": false,
   "maxInputTokens": 400000,
   "reasoning": {
-    "default": "none",
+    "default": "high",
     "levels": {
-      "none": {
-        "maxInputTokens": 400000
-      },
-      "low": {
-        "maxInputTokens": 400000
-      },
       "medium": {
         "maxInputTokens": 400000
       },
       "high": {
+        "maxInputTokens": 400000
+      },
+      "xhigh": {
         "maxInputTokens": 400000
       }
     }

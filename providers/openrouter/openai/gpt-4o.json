@@ -1,6 +1,0 @@
-{
-  "displayName": "OpenRouter GPT-4o",
-  "supportsVision": true,
-  "supportsTemperature": false,
-  "maxInputTokens": 200000
-}

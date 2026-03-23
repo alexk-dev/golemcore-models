@@ -1,6 +1,6 @@
 # golemcore-models
 
-Example registry layout for GolemCore model defaults.
+Shared registry layout for GolemCore model defaults.
 
 Lookup order:
 
@@ -9,9 +9,16 @@ Lookup order:
 
 Each JSON file contains full `ModelSettings` without the `provider` field.
 
-Examples in this repository:
+This repository intentionally contains only current general-purpose text/vision models used in Model Catalog discovery.
 
-- `models/gpt-5.1.json`
-- `models/o3.json`
-- `models/openai/gpt-4o.json`
-- `providers/openrouter/openai/gpt-4o.json`
+Excluded on purpose:
+
+- deprecated models
+- legacy `gpt-4o` / `o3` style families
+- audio-only, image-only, TTS, live, and other specialized endpoints
+
+Current families included:
+
+- OpenAI GPT versioned models
+- Anthropic Claude current aliases
+- Gemini current text multimodal models

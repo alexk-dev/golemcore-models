@@ -1,5 +1,5 @@
 {
-  "displayName": "GPT-5.1",
+  "displayName": "GPT-5.2",
   "supportsVision": true,
   "supportsTemperature": false,
   "maxInputTokens": 400000,
@@ -16,6 +16,9 @@
         "maxInputTokens": 400000
       },
       "high": {
+        "maxInputTokens": 400000
+      },
+      "xhigh": {
         "maxInputTokens": 400000
       }
     }

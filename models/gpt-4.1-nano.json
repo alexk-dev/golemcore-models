@@ -1,6 +1,6 @@
 {
-  "displayName": "GPT-4o",
+  "displayName": "GPT-4.1 nano",
   "supportsVision": true,
   "supportsTemperature": true,
-  "maxInputTokens": 128000
+  "maxInputTokens": 1047576
 }

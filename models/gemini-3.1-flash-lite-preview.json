@@ -1,0 +1,23 @@
+{
+  "displayName": "Gemini 3.1 Flash-Lite Preview",
+  "supportsVision": true,
+  "supportsTemperature": true,
+  "maxInputTokens": 1048576,
+  "reasoning": {
+    "default": "minimal",
+    "levels": {
+      "minimal": {
+        "maxInputTokens": 1048576
+      },
+      "low": {
+        "maxInputTokens": 1048576
+      },
+      "medium": {
+        "maxInputTokens": 1048576
+      },
+      "high": {
+        "maxInputTokens": 1048576
+      }
+    }
+  }
+}
