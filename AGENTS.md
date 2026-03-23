@@ -82,3 +82,42 @@ Before committing:
 
 - run `jq empty models/*.json` and, if applicable, `jq empty providers/**/*.json`
 - keep `README.md` in sync with the supported models actually present in the repository
+
+## Git workflow
+
+- Direct pushes to `main` are prohibited.
+- All changes must go through a feature branch and Pull Request.
+- Keep commits focused and reviewable.
+
+## Commit messages
+
+Use Conventional Commits.
+
+Format:
+
+`<type>[optional scope]: <description>`
+
+Allowed types:
+
+- `feat`
+- `fix`
+- `refactor`
+- `test`
+- `docs`
+- `chore`
+- `perf`
+- `style`
+- `revert`
+
+Rules:
+
+- use imperative mood
+- keep the subject concise
+- do not end the subject with a period
+- use a scope when it improves clarity, for example `models`, `readme`, `registry`, or `github`
+
+Examples:
+
+- `feat(models): add gpt-5.3-codex defaults`
+- `docs(readme): update supported models table`
+- `chore(github): add commit message workflow`

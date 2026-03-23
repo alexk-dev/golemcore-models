@@ -1,0 +1,71 @@
+name: Commit Message Check
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  conventional-commits:
+    name: conventional-commits
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate commit messages
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+
+          regex='^(feat|fix|refactor|test|docs|chore|perf|style|revert)(\([a-z0-9][a-z0-9._/-]*\))?(!)?: [^ ].*[^.]$'
+
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            range="${BASE_SHA}..${HEAD_SHA}"
+          else
+            if [ "${BEFORE_SHA}" = "0000000000000000000000000000000000000000" ]; then
+              range="${AFTER_SHA}"
+            else
+              range="${BEFORE_SHA}..${AFTER_SHA}"
+            fi
+          fi
+
+          echo "Validating commits in range: ${range}"
+
+          invalid=0
+
+          while IFS=$'\t' read -r sha subject; do
+            if [ -z "${sha}" ]; then
+              continue
+            fi
+
+            if [[ "${subject}" =~ ^Merge[[:space:]] ]]; then
+              continue
+            fi
+
+            if [[ ! "${subject}" =~ ${regex} ]]; then
+              echo "Invalid commit message: ${sha} ${subject}"
+              invalid=1
+            fi
+          done < <(git log --format='%H%x09%s' "${range}")
+
+          if [ "${invalid}" -ne 0 ]; then
+            echo "Commit message validation failed. Use Conventional Commits."
+            exit 1
+          fi
+
+          echo "All commit messages passed Conventional Commit validation."
