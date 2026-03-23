@@ -1,0 +1,6 @@
+{
+  "displayName": "GPT-5.1",
+  "supportsVision": true,
+  "supportsTemperature": false,
+  "maxInputTokens": 1000000
+}

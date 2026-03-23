@@ -1,0 +1,6 @@
+{
+  "displayName": "GPT-4o",
+  "supportsVision": true,
+  "supportsTemperature": true,
+  "maxInputTokens": 128000
+}
